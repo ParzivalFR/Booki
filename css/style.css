@@ -154,10 +154,15 @@ nav .menu ul li a:hover {
     line-height: normal;
     padding: 15px 16px;
     font-weight: 700;
+    cursor: pointer;
  }
 
  
  /* Barre de filtres */
+
+.filter-bar i {
+    font-size: 22px;
+}
 
  .filter-bar {
     margin-bottom: 35px;
@@ -181,6 +186,7 @@ nav .menu ul li a:hover {
     border-radius: 50px;
     border: 2px solid var(--Grey-Tint2, #D9D9D9);
     background-color: transparent;
+    cursor: pointer;
  }
 
  .filter-bar button p {
@@ -247,21 +253,63 @@ nav .menu ul li a:hover {
     font-style: normal;
 }
 
-.hebergements .first-cards {
+.hebergements .first-cards img {
+    width: 100%;
+    height: 135px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.first-cards {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
 }
 
-.hebergements .first-cards div {
-    border: none;
+.first-cards img {
+    object-fit: cover;
+}
+
+.first-cards article {
+    background-color: #FFF;
     border-radius: 20px;
-    background: #FFF;
+    padding: 5px;
 }
 
-.hebergements .first-cards .img-hotel {
-    height: 124px;
-    background-size: cover;
+.card-content {
+    padding: 0px 15px 15px 15px;
 }
+
+
+.hebergements .second-cards img {
+    width: 100%;
+    height: 135px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.second-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.second-cards img {
+    object-fit: cover;
+}
+
+.second-cards article {
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+
 
 /****** Populaires ***********/
 .populaires {
