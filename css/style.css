@@ -14,6 +14,7 @@
 }
 
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -58,6 +59,167 @@ a {
     color: var(--main-bg-color)
 }
 
+/****** Header ***********/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+nav .logo {
+    margin: 30px 0;
+}
+
+nav .logo img {
+    width: 60px;
+}
+
+nav .menu ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+nav .menu ul li {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+nav .menu ul li a:hover {
+    border-top: solid 2px #0065FC;
+
+}
+
+
+
+/* Groupe d'information */
+
+.info-group {
+    margin-bottom: 35px;
+}
+
+
+/* Titles */
+
+.titles {
+    margin-bottom: 35px;
+}
+
+
+ /* Barre de recherche  */
+
+.search-bar {
+    margin-bottom: 35px;
+}
+
+.search-bar form {
+    display: flex;
+ }
+
+ .search-bar form input {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid var(--Grey, #F2F2F2);
+    border-bottom: 1px solid var(--Grey, #F2F2F2);
+    background: var(--White, #FFF);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+ }
+
+.search-bar form input::placeholder {
+    color: var(--Black, #000);
+}
+
+
+ .search-bar form input:focus {
+    outline: none;
+ }
+ 
+ .search-bar form button {
+    background-color: #0065FC;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    padding: 15px 16px;
+    font-weight: 700;
+ }
+
+ 
+ /* Barre de filtres */
+
+ .filter-bar {
+    margin-bottom: 35px;
+    display: flex;
+    gap: 15px;
+ }
+
+ .filter-bar .title-filter {
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+ }
+
+ .filter-bar button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 4px 19px;
+    border-radius: 50px;
+    border: 2px solid var(--Grey-Tint2, #D9D9D9);
+    background-color: transparent;
+ }
+
+ .filter-bar button p {
+    padding: 0 10px;
+    color: var(--Black, #000);
+    font-family: Raleway;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+ }
+
+ .filter-bar button:hover {
+    background: var(--Blue-Light, #DEEBFF);
+ }
+
+
+ /* Barre d'informations */
+
+ .infobar {
+    display: flex;
+ }
+
+ .infobar img {
+    margin-right: 10px;
+ }
+
+ .infobar p {
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+ }
+
+
+
+ 
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -74,6 +236,31 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements .title {
+    color: #000;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    font-style: normal;
+}
+
+.hebergements .first-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements .first-cards div {
+    border: none;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.hebergements .first-cards .img-hotel {
+    height: 124px;
+    background-size: cover;
 }
 
 /****** Populaires ***********/
