@@ -62,6 +62,7 @@ a {
 /****** Header ***********/
 
 nav {
+    margin: 0;
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -73,13 +74,14 @@ nav .logo {
 }
 
 nav .logo img {
-    width: 60px;
+    width: 70px;
 }
 
 nav .menu ul {
     text-decoration: none;
     list-style: none;
     display: flex;
+    padding-top: 10px;
 }
 
 nav .menu ul li {
@@ -90,7 +92,6 @@ nav .menu ul li {
 
 nav .menu ul li a:hover {
     border-top: solid 2px #0065FC;
-
 }
 
 
@@ -303,9 +304,10 @@ nav .menu ul li a:hover {
     align-items: center;
 }
 
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin: 65px 10px;
 }
 
 .populaires-cards img {
@@ -342,44 +344,78 @@ nav .menu ul li a:hover {
 /* Activités à Marseille */
 
 .section-activites {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    align-self: stretch;
     padding: 30px;
 }
 
-.section-activites .activites-cards {
+.section-activites .title-act {
+    padding-bottom: 30px;
+}
+
+.section-activites .title-act h2 {
+    font-family: Raleway;
+}
+
+.section-activites .stock-cards {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.section-activites .activites-cards article {
-    width: 30%;
+.stock-cards a {
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 20px;
+    margin: 0 30px 30px 0;
+    width: 100%;
 }
 
-
-
-.section-activites .activites-cards img {
-    height: 439px;
-    width: 300px;
+.stock-cards img {
     object-fit: cover;
+    height: 400px;
+    width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
 
-.section-activites .activites-cards a {
-    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-    border-radius: 20px;
+.stock-cards h3 {
+    padding-left: 19px;
 }
 
-.section-activites .content-cards {
-    width: 100%;
+
+
+
+/* Footer */
+
+footer {
     display: flex;
-    padding: 20px 19px;
-    margin: 0;
-    font-size: 16px;
+    background-color: #F2F2F2;
 }
+
+.a-propos,
+.nos-heberg,
+.assist {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+.a-propos ul,
+.nos-heberg ul,
+.assist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.a-propos li,
+.assist li,
+.nos-heberg li {
+    margin-bottom: 15px;
+}
+
+
+
+
+
 
 
 
