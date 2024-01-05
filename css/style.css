@@ -161,48 +161,55 @@ nav .menu ul li a:hover {
  
  /* Barre de filtres */
 
-.filter-bar i {
+
+ .filter-bar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px 20px 0;
+}
+
+.filter-bar .title-filter {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-bar .choice {
+    display: flex;
+    text-decoration: none;
+}
+
+.filter-bar .choice p {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.filter-bar .choice  a {
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+    border: 2px solid var(--Grey-Tint2, #D9D9D9);
+    margin-right: 20px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-bar .choice i {
+    padding-right: 10px;
     font-size: 22px;
 }
 
- .filter-bar {
-    margin-bottom: 35px;
-    display: flex;
-    gap: 15px;
- }
-
- .filter-bar .title-filter {
-    font-family: Raleway;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
- }
-
- .filter-bar button {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 4px 19px;
-    border-radius: 50px;
-    border: 2px solid var(--Grey-Tint2, #D9D9D9);
-    background-color: transparent;
-    cursor: pointer;
- }
-
- .filter-bar button p {
-    padding: 0 10px;
-    color: var(--Black, #000);
-    font-family: Raleway;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
- }
-
- .filter-bar button:hover {
+.filter-bar .choice a:hover {
     background: var(--Blue-Light, #DEEBFF);
- }
+}
+
+
 
 
  /* Barre d'informations */
