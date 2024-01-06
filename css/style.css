@@ -58,7 +58,13 @@ a {
     color: var(--main-bg-color)
 }
 
+h3 {
+    font-size: 16px;
+}
 
+p {
+    font-size: 14px;
+}
 
 /****** Header ***********/
 
@@ -254,66 +260,59 @@ header .navbar a:hover {
     width: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.hebergements .container-cards {
-    display: flex;
-    justify-content: space-between;
     gap: 30px;
-    box-sizing: border-box;
 }
 
-.hebergements .container-cards a {
-    width: 100%;
+.heberg-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
-.container-cards .heberg-cards {
-    border-radius: 20px;
-    background: #FFF;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    box-sizing: border-box;
-}
-
-.container-cards .heberg-cards img {
-    object-fit: cover;
-    width: calc(100% - 10px);
-    height: 124px;
-    padding: 5px 5px 0px 5px;
+.heberg-cards img {
+    height: 115px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    overflow: hidden;
+    object-fit: cover;
+    box-sizing: border-box;
+    padding: 5px;
 }
 
-.content-cards .txt-cards {
+.heberg-cards .cards-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0 15px 15px 15px;
+}
+
+.cards-content .cards-txt {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.content-cards {
+.cards {
+    box-sizing: border-box;
     display: flex;
-    padding: 0px 15px 15px 15px;
     flex-direction: column;
-    gap: 8px;
+    background-color: white;
+    width: 250px;
+    height: 192px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 }
 
-.cards-title,
-.subtitle {
+.heberg-cards .cards-title,
+.heberg-cards .cards-subtitle {
     margin: 0;
-    padding: 0;
-}
-
-.heberg-title {
-    margin: 0;
-    padding: 0;
 }
 
 .display-more {
-    margin: 0;
-    padding: 0;
+    font-size: 18px;
 }
-
 
 /****** Populaires ***********/
 .populaires {
@@ -445,6 +444,7 @@ footer {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
