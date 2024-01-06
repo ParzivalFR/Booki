@@ -260,10 +260,12 @@ header .navbar a:hover {
     width: 65%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
 }
 
 .heberg-cards {
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -312,6 +314,10 @@ header .navbar a:hover {
 
 .display-more {
     font-size: 18px;
+}
+
+.heberg-subtitle h3 {
+    margin: 0;
 }
 
 /****** Populaires ***********/
