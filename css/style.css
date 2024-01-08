@@ -95,6 +95,7 @@ header .navbar a {
 
 header .navbar a:hover {
     border-top: solid 2px #0065FC;
+    color: #0065FC;
 }
 
 
@@ -450,65 +451,6 @@ footer {
 
 /****** Media queries ***********/
 
-
-/* @media (max-width: 1439px) and (min-width: 1024px) {
-    .hebergements-and-populaires {
-        flex-direction: column;
-    }
-
-    .hebergements {
-        width: 100%;
-    }
-
-    .heberg-cards {
-        display: flex;
-    }
-
-    .heberg-cards .cards {
-        width: 299px;
-        height: 207px;
-    }
-
-    .heberg-cards img {
-        margin-bottom: 5px;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .populaires-cards a {
-        width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
-
-    .section-activites .card-act {
-        width: 185px;
-    }
-     
-    .card-act img {
-        width: 185px;
-        height: 200px;
-    }
-} */
-
-
-
 /* Medium devices (tablets, less/equal than 1024px) */
 
 @media (max-width: 1024px) {
@@ -562,5 +504,86 @@ footer {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
     /* ... */
+    * {
+        margin: 0px;
+        box-sizing: border-box;
+    }
 
+    .main-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    header img {
+        margin: 20px;
+        padding: 0;
+    }
+
+    header .navbar {
+        width: 100%;
+        height: auto;
+        gap: 0;
+        box-sizing: border-box;
+        border-bottom: solid #F2f2f2 3px;
+    }
+
+    .navbar a {
+        display: flex;
+        justify-content: space-around;
+    } 
+
+    header .navbar a:hover {
+        border-top: none;
+    }
+
+    .navbar .nav-heberg,
+    .navbar .nav-act {
+        width: 100%;
+        padding-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .nav-heberg:hover,
+    .nav-act:hover {
+        border-bottom: solid 2px #0065FC;
+        color: #0065FC;
+    }
+
+    main .info-group {
+        padding: 0 20px;
+        gap: 35px;
+    }
+
+    .titles {
+        gap: 8px;
+    }
+
+    .titles h1 {
+        font-size: 22px;
+    }
+
+    .titles p {
+        font-size: 16px;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+    }
+
+    .choice {
+        flex-wrap: ;
+    }
 }
