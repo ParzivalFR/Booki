@@ -104,21 +104,28 @@ header .navbar a:hover {
 
 .info-group {
     margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 
 /* Titles */
 
 .titles {
-    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.titles h1,
+.titles p {
+    margin: 0;
 }
 
 
  /* Barre de recherche  */
 
-.search-bar {
-    margin-bottom: 35px;
-}
 
 .search-bar form {
     display: flex;
@@ -166,20 +173,17 @@ header .navbar a:hover {
  /* Barre de filtres */
 
 
- .filter-bar {
+ .filter-bar,
+ .choice {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 20px 20px 0;
+    gap: 15px;
 }
 
 .filter-bar .title-filter {
     font-family: Raleway;
     font-size: 18px;
     font-weight: 700;
-    display: flex;
-    margin-right: 15px;
-    justify-content: center;
-    align-items: center;
 }
 
 .filter-bar .choice {
@@ -197,10 +201,8 @@ header .navbar a:hover {
     color: black;
     border-radius: 30px;
     border: 2px solid var(--Grey-Tint2, #D9D9D9);
-    margin-right: 20px;
     padding: 0 20px;
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -220,18 +222,18 @@ header .navbar a:hover {
 
  .infobar {
     display: flex;
+    justify-content: flex-start;
+    gap: 10px;
  }
 
- .infobar img {
+ /* .infobar img {
     margin-right: 10px;
- }
+ } */
 
- .infobar p {
-    font-family: Raleway;
+.infobar p {
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    margin: 0;
  }
 
 
@@ -265,7 +267,6 @@ header .navbar a:hover {
 }
 
 .heberg-cards {
-    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -301,8 +302,8 @@ header .navbar a:hover {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 250px;
-    height: 192px;
+    width: 247px;
+    height: 200px;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 }
@@ -378,33 +379,32 @@ header .navbar a:hover {
     padding-bottom: 30px;
 }
 
-.section-activites .title-act h2 {
-    font-family: Raleway;
-}
-
 .section-activites .stock-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
     gap: 30px;
     width: 100%;
 }
 
-.stock-cards a {
-    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+.card-act {
     border-radius: 20px;
-    /* margin: 0 30px 30px 0; */
-    width: 100%;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+    width: 295px;
+    height: 100%;
 }
 
-.stock-cards img {
+.card-act img {
     object-fit: cover;
-    height: 400px;
     width: 100%;
+    height: 380px;
     border-radius: 20px 20px 0px 0px;
+    box-sizing: border-box;
 }
 
-.stock-cards h3 {
-    padding-left: 19px;
+.name-act {
+    margin: 0;
+    padding: 20px 19px;
 }
 
 
@@ -449,6 +449,66 @@ footer {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+
+
+/* @media (max-width: 1439px) and (min-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .heberg-cards {
+        display: flex;
+    }
+
+    .heberg-cards .cards {
+        width: 299px;
+        height: 207px;
+    }
+
+    .heberg-cards img {
+        margin-bottom: 5px;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .section-activites .card-act {
+        width: 185px;
+    }
+     
+    .card-act img {
+        width: 185px;
+        height: 200px;
+    }
+} */
+
+
+
 /* Medium devices (tablets, less/equal than 1024px) */
 
 @media (max-width: 1024px) {
@@ -464,6 +524,12 @@ footer {
         width: 100%;
         margin-top: 50px;
     }
+
+    .heberg-cards .cards {
+        width: 261px;
+        height: auto;
+    }
+    
 
     .populaires-cards {
         display: flex;
@@ -482,9 +548,19 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .section-activites .card-act {
+        width: 185px;
+    }
+     
+    .card-act img {
+        width: 185px;
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     /* ... */
+
 }
