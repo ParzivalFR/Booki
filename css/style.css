@@ -16,7 +16,6 @@
 body {
     display: flex;
     justify-content: center;
-    margin: 0;
 }
 
 .main-container {
@@ -128,73 +127,59 @@ header .navbar a:hover {
 
  /* Barre de recherche  */
 
-form {
+
+.search-bar form {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    width: 377px;
-    height: 49px;
-    overflow: hidden;
-    border: solid 1px #F2F2F2;
-    border-radius: 15px;
 }
 
-form .search-icon {
-    height: 50px;
-    width: 49px;
-    background-color: #F2F2F2;
-    border: solid 1px #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-form input,
-input::placeholder {
+ .search-bar form input {
     border: none;
-    padding: 0;
-    width: 147px;
-    height: 21px;
-    outline: none;
-    color: black;
+    border: 1px solid var(--Grey, #F2F2F2);
+    background: var(--White, #FFF);
     font-size: 18px;
     font-weight: 700;
-    box-sizing: border-box;
+    padding: 0;
+ }
+
+.search-bar form input::placeholder {
+    color: var(--Black, #000);
+    text-align: center;
 }
 
-form .txt-button {
-    display: flex;
-    width: 132px;
-    height: 49px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 15px 15px 0;
-    border: solid 1px #0065FC;
+
+ .search-bar form input:focus {
+    outline: none;
+ }
+ 
+ .search-bar form .txt-button {
     background-color: #0065FC;
-    padding: 15px 16px;
-    margin: 0;
-    color: #FFF;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    color: var(--White, #FFF);
+    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
-    font-family: Raleway;
-}
+    padding: 15px 16px;
+    font-weight: 700;
+    cursor: pointer;
+ }
 
-/* Supprimer la petite croix de suppression dans le champ de recherche */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-clear-button {
-  -webkit-appearance: none;
-  appearance: none;
-  display: none;
-}
-
-form .glass-button {
+ .glass-button {
     display: none;
-}
+ }
 
+
+ #search-img {
+    width: 50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2f2f2;
+    border-radius: 15px 0px 0px 15px;
+    color: #000000;
+ }
 
  
  /* Barre de filtres */
@@ -298,18 +283,13 @@ form .glass-button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    box-sizing: border-box;
 }
  
 .heberg-cards a {
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     background-color: white;
-}
 
-a .cards {
-    width: 100%;
-    height: 100%;
 }
 
 .cards img {
@@ -322,12 +302,18 @@ a .cards {
     border-top-right-radius: 20px;
 }
 
-.heberg-cards h3,
-.heberg-cards p {
+.heberg-cards .cards-title,
+.heberg-cards .cards-subtitle {
     margin: 0;
 }
 
-.cards .cards-content {
+.display-more {
+    font-size: 18px;
+    margin: 0;
+} 
+
+.heberg-cards .cards-content {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -338,21 +324,9 @@ a .cards {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 100%;
-    height: 100%;
 }
 
-.display-more {
-    font-size: 18px;
-    margin: 0;
-} 
-
-
-
-
-
 /****** Populaires ***********/
-
 .populaires {
     width: 32%;
 }
@@ -616,39 +590,7 @@ footer {
 
     /* Barre de recherche */
 
-    form {
-        display: flex;
-        width: 100%;
-        border-radius: 20px;
-        border: 1px solid var(--Grey, #F2F2F2);
-        overflow: visible;
-    }
-
-    form .search-icon {
-        height: 100%;
-    }
-
-    form .txt-button {
-        display: none;
-    }
-
-    form .glass-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #0065FC;
-        border: solid 1px #0065FC;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        border-radius: 15px;
-        width: 49px;
-        height: 49px;
-    }
-
-    form .glass-button i {
-        color: #ffffff;
-    }
-
-    /* .search-bar {
+    .search-bar {
         display: flex;
         width: 100%;
         height: 49px;
@@ -687,7 +629,7 @@ footer {
         padding: 15px 16px;
     }
 
-     */
+    
 
     /* Barre de filtres */
 
