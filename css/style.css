@@ -8,6 +8,7 @@
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
     --Grey-Tint2: #D9D9D9;
+    --white-color: #fff;
 }
 
 .fa-solid {
@@ -38,7 +39,7 @@ a {
 }
 
 .card {
-    background-color: var(--main-bg-color);
+    background-color: var(--white-color);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -166,6 +167,7 @@ input::placeholder {
     font-size: 18px;
     font-weight: 700;
     box-sizing: border-box;
+    background-color: var(--white-color);
 }
 
 form .txt-button {
@@ -208,7 +210,6 @@ form .glass-button {
  .choice {
     display: flex;
     justify-content: flex-start;
-    /* flex-wrap: wrap; */
     gap: 15px;
 }
 
@@ -308,7 +309,7 @@ form .glass-button {
 .heberg-cards a {
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-    background-color: var(--main-bg-color);
+    background-color: var(--white-color);
 }
 
 a .cards {
@@ -531,10 +532,6 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
-
-    .choice {
-        width: 100%;
-    }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -644,7 +641,7 @@ footer {
     }
 
     form .glass-button i {
-        color: var(--main-bg-color);
+        color: var(--white-color);
     }
 
 
@@ -654,7 +651,6 @@ footer {
 
     .filter-bar {
         flex-direction: column;
-        /* display: none; */
     }
 
     .filter-bar .choice {
@@ -663,8 +659,13 @@ footer {
         grid-template-rows: 1fr 1fr;
         width: 100%;
         height: 125px;
-        gap: 20px;
+        gap: 10px;
     }
+
+    .filter-bar .choice p {
+        font-size: 14px;
+    }
+
 
     .filter-bar .choice a {
         display: flex;
@@ -687,6 +688,10 @@ footer {
     .hebergements-and-populaires .populaires {
         margin: 0;
         padding: 30px;
+    }
+
+    .hebergements {
+        background-color: var(--white-color);
     }
 
     .populaires,
