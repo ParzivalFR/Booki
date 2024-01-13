@@ -638,6 +638,10 @@ footer {
         color: var(--white-color);
     }
 
+    .glass-button:hover {
+        cursor: pointer;
+    }
+
 
     
 
