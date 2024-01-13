@@ -17,6 +17,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
@@ -150,20 +151,21 @@ form .search-icon {
     border: solid 1px var(--main-bg-color);
     border-radius: 15px 0px 0px 15px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
- .search-bar form input {
+form input,
+input::placeholder {
     border: none;
-    border: 1px solid var(--Grey, #F2F2F2);
-    background: var(--White, #FFF);
+    padding: 0;
+    width: 147px;
+    height: 21px;
+    outline: none;
+    color: black;
     font-size: 18px;
     font-weight: 700;
-    padding: 0;
- }
-
-.search-bar form input::placeholder {
-    color: var(--Black, #000);
-    text-align: center;
+    box-sizing: border-box;
 }
 
 form .txt-button {
@@ -195,19 +197,8 @@ input[type="search"]::-webkit-search-clear-button {
 
 form .glass-button {
     display: none;
- }
+}
 
-
- #search-img {
-    width: 50px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F2f2f2;
-    border-radius: 15px 0px 0px 15px;
-    color: #000000;
- }
 
  
  /* Barre de filtres */
@@ -311,6 +302,7 @@ form .glass-button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    box-sizing: border-box;
 }
  
 .heberg-cards a {
@@ -319,6 +311,9 @@ form .glass-button {
     background-color: var(--main-bg-color);
 }
 
+a .cards {
+    width: 100%;
+    height: 100%;
 }
 
 .cards img {
@@ -331,18 +326,12 @@ form .glass-button {
     border-top-right-radius: 20px;
 }
 
-.heberg-cards .cards-title,
-.heberg-cards .cards-subtitle {
+.heberg-cards h3,
+.heberg-cards p {
     margin: 0;
 }
 
-.display-more {
-    font-size: 18px;
-    margin: 0;
-} 
-
-.heberg-cards .cards-content {
-    box-sizing: border-box;
+.cards .cards-content {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -353,9 +342,21 @@ form .glass-button {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
+    height: 100%;
 }
 
+.display-more {
+    font-size: 18px;
+    margin: 0;
+} 
+
+
+
+
+
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
@@ -626,10 +627,6 @@ footer {
         overflow: visible;
     }
 
-    form .search-icon {
-        height: 100%;
-    }
-
     form .txt-button {
         display: none;
     }
@@ -650,44 +647,6 @@ footer {
         color: var(--main-bg-color);
     }
 
-    /* .search-bar {
-        display: flex;
-        width: 100%;
-        height: 49px;
-        border-radius: 20px;
-    }
-
-    .txt-button {
-        display: none;
-    }
-
-    .search-bar form {
-        width: 100%;
-        border: 1px solid var(--Grey, #F2F2F2);  
-        border-radius: 20px;  
-    }
-
-    .search-bar form input {
-        width: 100%;
-        padding: 0px 20px;
-        border: none;
-    }
-
-    .search-bar i {
-        color: #ffffff;
-        padding: 0;
-    }
-     
-    .search-bar .glass-button {
-        display: flex;
-        align-items: center;
-        background-color: #0065FC;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        padding: 15px 16px;
-    }
 
     
 
