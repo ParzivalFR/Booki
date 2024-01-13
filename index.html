@@ -16,6 +16,9 @@
 
 <body>
   <div class="main-container">
+
+    <!-- Header -->
+
     <header>
       <a href="#">
         <img src="images/logo/Booki.png" alt="logo booki" />
@@ -29,19 +32,23 @@
     <!-- Passons au Main -->
 
     <main>
+
+      <!-- Section Infos -->
+
       <section class="info-group">
         <div class="titles">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre-ville ou en pleine nature</p>
         </div>
-        <div class="search-bar">
-          <form id="monFormulaire" action="" method="get">
-            <i id="search-img" class="fas fa-map-marker-alt"></i>
-            <input type="search" name="monFormulaire" placeholder="Marseille, France" />
+        
+          <form id="recherche" action="#" method="get">
+            <label for="barre-recherche">
+              <i class="search-icon fas fa-map-marker-alt"></i>
+            </label>
+            <input id="barre-recherche" type="search" name="recherche" placeholder="Marseille, France" />
             <button class="txt-button">Rechercher</button>
             <button class="glass-button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
           </form>
-        </div>
 
         <div class="filter-bar">
           <p class="title-filter">Filtres</p>
@@ -329,7 +336,10 @@
       </section>
     </main>
 
+    <!-- Footer -->
+
   <footer class="global-footer">
+
     <div class="a-propos">
       <h4>À propos</h4>
       <ul>
@@ -354,6 +364,7 @@
         <li><a href="#">Nous contacter</a></li>
       </ul>
     </div>
+    
   </footer>
   </div>
 </body>
