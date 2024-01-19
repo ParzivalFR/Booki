@@ -162,6 +162,7 @@ form #barre-recherche {
     font-size: 18px;
     font-weight: 700;
     box-sizing: border-box;
+    background-color: var(--white-color);
 }
 
 form #barre-recherche::placeholder {
